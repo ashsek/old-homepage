@@ -1,70 +1,67 @@
----
-layout: default
----
-<div class="footer-clear post-wrapper">
 
-  <!-- post archive trigger -->
-  <div class="post-archive-trigger">
-    <div class="post-archive-icon"></div>
-  </div>
+<!-- Post Layout Start -->
 
-  <!-- post archive -->
-  <div class="post-archive">
-    <div class="post-archive-iterms">
-      {% for post in site.posts %}
-      {% if page.url == post.url %}
-      {% assign status = 'checked' %}
-      {% else %}
-      {% assign status = '' %}
-      {% endif %}
-      <a class="post-archive-iterm" href="{{ post.url }}">
-        <span class="post-archive-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-        <span class="post-archive-title {{ status }}">{{ post.title }}</span>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
 
-  <!-- post header -->
-  <div class="post-header">
-    <h1>{{ page.title }}</h1>
-    <span>{{ page.date | date: "%Y-%m-%d" }}</span>
-  </div>
+  {% include head.html %}
 
-  <!-- post content -->
-  {% if page.tags contains 'chinese' %}
-  {% assign type = 'chinese' %}
-  {% else %}
-  {% assign type = 'english' %}
-  {% endif %}
+  <body>
 
-  <div class="post-content {{ type }}">
-    {{ content }}
-  </div>
+    {% include navigation.html %}
 
-  <!-- post navigator -->
-  <div class="post-nav">
-    {% if page.previous %}
-    <a class="post-nav-previous"href="{{ page.previous.url }}">{{ page.previous.title }}</a>
-    {% endif %}
+    <section id="post" class="container content-section text-center">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
 
-    {% if page.previous and page.next %}
-    <div class="post-nav-sep"></div>
-    {% endif %}
+          {% include swipe-instructions.html %}
 
-    {% if page.next %}
-    <a class="post-nav-next" href="{{ page.next.url }}">{{ page.next.title }}</a>
-    {% endif %}
-  </div>
+          <h1><strong>{{ page.title }}</strong></h1>
+          <h4>
+            <strong>{{ page.date | date_to_string }}</strong>
+            <small>
+              . category:
+              <a class="category" href="{{site.baseurl}}/categories/{{page.category | downcase}}.html">
+                {{ page.category }}
+              </a>.
+              <a href="{{site.baseurl}}{{page.url }}#disqus_thread">Comments</a>
+              <br />
+              {% for tag in page.tags %}
+                <a class="tag" href="{{site.baseurl}}/tags/{{tag | downcase}}.html">#{{ tag }}</a>
+              {% endfor %}
+            </small>
+          </h4>
 
-  <!-- disqus comment system -->
-  {% if site.disqus_shortname != '' %}
-  <div class="post-comment">
-    {% include disqus.html %}
-  </div>
-  {% endif %}
+          <section class="text-justify">
+            {{ page.content | markdownify }}
+          </section>
 
-  <!-- footer -->
-  {% include footer.html %}
+          {% include share.html %}
 
-</div>
+          {% if jekyll.environment == "production" %}
+            {% include comments.html %}
+          {% endif %}
+
+
+          <hr />
+
+          {% if site.author_blurb %}
+          <div class="author row">
+            <img class="col-xs-4 col-sm-3 col-md-2" src="{{site.baseurl}}{{site.author_blurb_image}}" alt="Me" />
+            <p class="col-xs-8 col-sm-9 col-md-10">
+              {{ site.author_blurb }}
+            </p>
+          </div>
+          {% endif%}
+        </div>
+      </div>
+    </section>
+
+    {% include footer.html %}
+
+    {% include js.html %}
+
+  </body>
+</html>
+
+<!-- Post Layout End -->

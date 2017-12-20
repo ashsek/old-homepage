@@ -113,20 +113,20 @@ enable-gesture-navigation: True
 
 post-preview-words: 96
 
-paginate: 5
+paginate: 100
 
 email-share: True
 fb-share: True
-twitter-share: False
-linkedin-share: False
-reddit-share: False
-google-plus-share: False
-tumblr-share: False
+twitter-share: True
+linkedin-share: True
+reddit-share: True
+google-plus-share: True
+tumblr-share: True
 pinterest-share: False
-pocket-share: False
+pocket-share: True
 vkontakte-share: False
 
-disqus-shortname: "panossakkos"
+disqus-shortname: "ashsek"
 
 syntax-highlight: True
 

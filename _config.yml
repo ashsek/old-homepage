@@ -70,7 +70,7 @@ lines: # You can add HTML Tags in the Text
 # in the end of the url just before '&type' is your user id.
 # Note: fbid is not the same as user id and user id only contains numbers
 
-me-img: "https://graph.facebook.com/100009519969619/picture?type=large&width=500&height=500"
+me-img: "https://graph.facebook.com/100009519969619/picture?type=large&width=700&height=700"
 
 # To use github profile pic uncomment the following line and replace 'user_name'
 # with your github user name.
@@ -136,7 +136,7 @@ syntax-highlight: True
 
 events:
   - image: "/img/timeline/nitrlogo.png"
-    date: "2017"
+    date: "YEAR 2017"
     description: "Started Studying CS at NITR"
 #  - image: "/img/timeline/baracktocat.jpg"
  #   date: "September 2007 - August 2013"

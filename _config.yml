@@ -31,9 +31,9 @@ force-https: True
 lang: "en"
 author: "Ashwin Sekhari"
 title: "Ashwin"
-description: "Hello World!"
+description: "About Ashwin"
 keywords: "ashsek, sekhari, ashwin"
-favicon: "/img/favicon.ico"
+favicon: "/img/headericon.ico"
 
 ################
 # Header layout #

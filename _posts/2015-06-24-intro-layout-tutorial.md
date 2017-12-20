@@ -67,7 +67,7 @@ on your profile pic and the large number in the end of the url just before '&typ
 Note: fbid is not the same as user id and user id only contains numbers.
 
 <pre><code data-trim class="yaml">
-me-img: "https://graph.facebook.com/user_id/picture?type=large&width=500&height=500"
+me-img: "https://graph.facebook.com/user_id/picture?type=large&width=700&height=700"
 </code></pre>
 
 If you want to connect your Github profile image then you can use the following.              

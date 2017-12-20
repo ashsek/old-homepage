@@ -55,8 +55,12 @@ type-speed: 10
 start-delay: 200
 delete-delay: 5000
 lines: # You can add HTML Tags in the Text
-  - text: "The lower you fall, the higher you'll fly."
+  - text: "Give him enough rope and he'll hang himself"
   - text: "Where’s your will to be weird?"
+  - text: "Nothing will work unless you do."
+  - text: "Do things that have never been done."
+  - text: "The meaning of life is to find your gift, the purpose is to give it away"
+  - text: "The way bread tastes depends on how hungry you are."
 
 #me-img: "/img/jetpacktocat.png"
 
